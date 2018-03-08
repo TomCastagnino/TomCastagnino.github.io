@@ -188,7 +188,7 @@ d3.queue()
 
 
     var width = 750,
-      height = 700;
+      height = 650;
 
     var projection = d3.geoTransverseMercator()
                        .center([2.5, -38.5])
@@ -362,7 +362,7 @@ bars
 .text((d, i) => datosInicioKeys[i] + ": " + datosInicio[i].toLocaleString())
 .attr("transform", "rotate(-90)")
 .attr("width", barWidth)
-.attr("y", (d, i) => (barWidth/2 + 5 + ((barWidth + barPadding) * i)))
+.attr("y", (d, i) => (barWidth/2 + 7 + ((barWidth + barPadding) * i)))
 .attr("x", (d) => -(height/2 + yScale(d)) +20)
 // .style("text-anchor", "middle")
 .style("font-size", "1.1em")
@@ -453,7 +453,7 @@ console.log(datos);
             .text((d, i) => datosKeys[i] + ": " + datos[i].toLocaleString())
             .attr("transform", "rotate(-90)")
             .attr("width", barWidth)
-            .attr("y", (d, i) => (barWidth/2 + 5 + ((barWidth + barPadding) * (i)) ))
+            .attr("y", (d, i) => (barWidth/2 + 7 + ((barWidth + barPadding) * (i)) ))
             .attr("x", (d) => -(height/2 + yScale(d)) +20 )
             .style("font-size", "1.1em")
             .attr("fill", "black");
