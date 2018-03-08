@@ -354,7 +354,7 @@ bars
     .attr("x", function(d, i) {
       return (barWidth + barPadding) * i;
     })
-    .attr("fill", "red");
+    .attr("fill", "MidnightBlue ");
 
 bars
 .append("text")
@@ -439,7 +439,7 @@ console.log(datos);
           .attr("x", function(d, i) {
             return (barWidth + barPadding) * i;
           })
-          .attr("fill", "red");
+          .attr("fill", "MidnightBlue ");
 
           bars
             .merge(update)
