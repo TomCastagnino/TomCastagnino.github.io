@@ -307,10 +307,38 @@ d3.queue()
           `
             break;
           case "poblacion":
-          tool = `
-          <p>${d.properties.administrative_area[0].name}</p>
-          <p>Cantidad de habitantes:  ${d.properties.cantidadHabitantes.toLocaleString()}</p>
-          `
+            tool = `
+            <p>${d.properties.administrative_area[0].name}</p>
+            <p>Cantidad de habitantes:  ${d.properties.cantidadHabitantes.toLocaleString()}</p>
+            `
+            break;
+          case "Robo y/o tentativa de robo":
+            tool = `
+            <p>${d.properties.administrative_area[0].name}</p>
+            <p>Cantidad de presos por robo y/o tentativa:  ${d.properties.datosCarceles.delito["Robo y/o tentativa de robo"].toLocaleString()}</p>
+            <p>Porcentaje: ${((d.properties.datosCarceles.delito["Robo y/o tentativa de robo"] * 100) / d.properties.cantidadHabitantes).toFixed(4)}%</p>
+            `
+            break;
+          case "Violaciones":
+            tool = `
+            <p>${d.properties.administrative_area[0].name}</p>
+            <p>Cantidad de presos por violación:  ${d.properties.datosCarceles.delito["Violaciones"].toLocaleString()}</p>
+            <p>Porcentaje: ${((d.properties.datosCarceles.delito["Violaciones"] * 100) / d.properties.cantidadHabitantes).toFixed(4)}%</p>
+            `
+            break;
+          case "Homicidio doloso":
+            tool = `
+            <p>${d.properties.administrative_area[0].name}</p>
+            <p>Cantidad de presos Homicidio doloso:  ${d.properties.datosCarceles.delito["Homicidio doloso"].toLocaleString()}</p>
+            <p>Porcentaje: ${((d.properties.datosCarceles.delito["Homicidio doloso"] * 100) / d.properties.cantidadHabitantes).toFixed(4)}%</p>
+            `
+            break;
+            case "Infracción ley n° 23.737 (estupefacientes)":
+            tool = `
+            <p>${d.properties.administrative_area[0].name}</p>
+            <p>Cantidad de presos por infracción de la ley de estupefacientes:  ${d.properties.datosCarceles.delito["Infracción ley n° 23.737 (estupefacientes)"].toLocaleString()}</p>
+            <p>Porcentaje: ${((d.properties.datosCarceles.delito["Infracción ley n° 23.737 (estupefacientes)"] * 100) / d.properties.cantidadHabitantes).toFixed(4)}%</p>
+            `
             break;
         }
         tooltip
