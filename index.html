@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>D3 Map</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,9 +19,13 @@
         xmlns="http://www.w3.org/2000/svg"
         id="svgMap">
       </svg>
-      <select id="selectMapa">
+      <select class="select-style" id="selectMapa">
         <option value="Hombres">Cantidad de Hombres Presos</option>
         <option value="Mujeres">Cantidad de Mujeres Presas</option>
+        <option value="Robo y/o tentativa de robo">Robo y/o tentativa de robo</option>
+        <option value="Violaciones">Violaciones</option>
+        <option value="Homicidio doloso">Homicidio doloso</option>
+        <option value="Infracción ley n° 23.737 (estupefacientes)">Ley 23.737 (Estupefacientes)</option>
         <option value="poblacion">Cantidad de Habitantes</option>
       </select>
     </div>
@@ -32,7 +36,7 @@
         xmlns="http://www.w3.org/2000/svg"
         id="svgCuadro">
       </svg>
-      <select id="selectTabla">
+      <select class="select-style" id="selectTabla">
         <option value="genero">Género</option>
         <option value="delito">Delito</option>
         <option value="niveldeInstrucción">Nivel de Instrucción</option>

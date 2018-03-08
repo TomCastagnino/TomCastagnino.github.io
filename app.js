@@ -232,13 +232,24 @@ d3.queue()
         "Hombres": ["white", "purple"],
         "Mujeres": ["white", "red"],
         poblacion: ["white", "black"],
-        fertilityRate: ["black", "orange"]
+        "Robo y/o tentativa de robo": ["white", "orange"],
+        "Violaciones": ["white", "Indigo"],
+        "Homicidio doloso": ["white", "Brown"],
+        "Infracción ley n° 23.737 (estupefacientes)": ["white", "green"]
       };
 
       var scale = d3.scaleLinear()
                     .domain([0, d3.max(geoData, d => {
                       if (val === "poblacion") {
                         return d.properties.cantidadHabitantes;
+                      } else if (val === "Robo y/o tentativa de robo") {
+                        return d.properties.datosCarceles.delito[val]/ d.properties.cantidadHabitantes;
+                      } else if (val === "Violaciones") {
+                        return d.properties.datosCarceles.delito["Violaciones"]/ d.properties.cantidadHabitantes;
+                      } else if (val === "Homicidio doloso") {
+                        return d.properties.datosCarceles.delito["Homicidio doloso"]/ d.properties.cantidadHabitantes;
+                      } else if (val === "Infracción ley n° 23.737 (estupefacientes)") {
+                        return d.properties.datosCarceles.delito["Infracción ley n° 23.737 (estupefacientes)"]/ d.properties.cantidadHabitantes;
                       } else {
                         return (d.properties.datosCarceles.genero[val] * 100) / d.properties[val];
                       }
@@ -250,7 +261,26 @@ d3.queue()
           .duration(750)
           .ease(d3.easeBackIn)
           .attr("fill", d => {
-            var data = val === "poblacion" ? d.properties.cantidadHabitantes : (d.properties.datosCarceles.genero[val] * 100) / d.properties[val];
+            var data;
+            switch (val) {
+              case "poblacion":
+                data = d.properties.cantidadHabitantes;
+                break;
+              case "Robo y/o tentativa de robo":
+                data = d.properties.datosCarceles.delito[val]/ d.properties.cantidadHabitantes;
+                break;
+              case "Violaciones":
+                data = d.properties.datosCarceles.delito["Violaciones"]/ d.properties.cantidadHabitantes;
+                break;
+              case "Homicidio doloso":
+                data = d.properties.datosCarceles.delito["Homicidio doloso"]/ d.properties.cantidadHabitantes;
+                break;
+              case "Infracción ley n° 23.737 (estupefacientes)":
+                data = d.properties.datosCarceles.delito["Infracción ley n° 23.737 (estupefacientes)"]/ d.properties.cantidadHabitantes;
+                break;
+              default:
+                data = (d.properties.datosCarceles.genero[val] * 100) / d.properties[val];
+          }
             return data ? scale(data) : "#ccc";
           });
     }
@@ -365,7 +395,7 @@ bars
 .attr("y", (d, i) => (barWidth/2 + 7 + ((barWidth + barPadding) * i)))
 .attr("x", (d) => -(height/2 + yScale(d)) +20)
 // .style("text-anchor", "middle")
-.style("font-size", "1.1em")
+.style("font-size", "400")
 .attr("fill", "black");
 
 
@@ -455,7 +485,7 @@ console.log(datos);
             .attr("width", barWidth)
             .attr("y", (d, i) => (barWidth/2 + 7 + ((barWidth + barPadding) * (i)) ))
             .attr("x", (d) => -(height/2 + yScale(d)) +20 )
-            .style("font-size", "1.1em")
+            .style("font-size", "400")
             .attr("fill", "black");
 
 
