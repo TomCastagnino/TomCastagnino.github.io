@@ -1,3 +1,7 @@
+body, select {
+  font-family: 'Lato', sans-serif;
+}
+
 svg, select {
   margin: 50px auto;
   display: block;
