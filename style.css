@@ -85,3 +85,9 @@ p {
 .select-style select:focus {
     outline: none;
 }
+
+@media only screen and (max-width: 500px) {
+  .container {
+     flex-wrap: wrap;
+  }
+}
