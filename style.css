@@ -38,3 +38,8 @@ path {
   text-align: center;
   padding-left: 60px;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+}

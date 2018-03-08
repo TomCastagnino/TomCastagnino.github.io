@@ -187,7 +187,7 @@ d3.queue()
     // });
 
 
-    var width = 960,
+    var width = 750,
       height = 700;
 
     var projection = d3.geoTransverseMercator()
