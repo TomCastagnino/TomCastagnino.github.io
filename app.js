@@ -329,7 +329,7 @@ d3.queue()
           case "Homicidio doloso":
             tool = `
             <p>${d.properties.administrative_area[0].name}</p>
-            <p>Cantidad de presos Homicidio doloso:  ${d.properties.datosCarceles.delito["Homicidio doloso"].toLocaleString()}</p>
+            <p>Cantidad de presos por Homicidio doloso:  ${d.properties.datosCarceles.delito["Homicidio doloso"].toLocaleString()}</p>
             <p>Porcentaje: ${((d.properties.datosCarceles.delito["Homicidio doloso"] * 100) / d.properties.cantidadHabitantes).toFixed(4)}%</p>
             `
             break;
