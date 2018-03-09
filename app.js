@@ -543,7 +543,7 @@ function end(d, i, nodes) {
   function cargarDatos(arr) {
     var carceles = {
       niveldeInstrucción: {
-        "Sin Datos": 0,
+        "Sin datos": 0,
         "Ninguno": 0,
         "Primario Incompleto": 0,
         "Primario Completo": 0,
@@ -570,7 +570,7 @@ function end(d, i, nodes) {
       nacionalidad: {
         "Argentinos": 0,
         "Extranjeros": 0,
-        "Sin Datos": 0,
+        "Sin datos": 0,
       },
       estadoCivil: {
         "Sin Datos": 0,
@@ -582,24 +582,24 @@ function end(d, i, nodes) {
         "Separados de hecho": 0
       },
       ultimaSituacionLaboral: {
-        "Sin Datos": 0,
-        "Trabajador Tiempo Completo": 0,
-        "Trabajador Tiempo Parcial": 0,
+        "Sin datos": 0,
+        "Trabajador tiempo completo": 0,
+        "Trabajador tiempo parcial": 0,
         "Desocupado": 0
       },
       capacitacionLaboral: {
-        "Sin Datos": 0,
-        "Tiene Algun Oficio": 0,
-        "Tiene Alguna Profesion": 0,
-        "No Tiene ni Oficio ni Profesion": 0
+        "Sin datos": 0,
+        "Tiene algún oficio": 0,
+        "Tiene alguna profesión": 0,
+        "Ni oficio ni profesión": 0
       },
       ultimoLugarDeResidencia: {
         "Urbano": 0,
         "Rural": 0,
-        "Sin Datos": 0
+        "Sin datos": 0
       },
       delito: {
-        "Sin Datos": 0,
+        "Sin datos": 0,
         "Homicidio doloso": 0,
         "Homicidio doloso (tent.)": 0,
         "Homicidio culposo": 0,
@@ -635,7 +635,7 @@ function end(d, i, nodes) {
       if (p.sexo_id === "1") carceles.genero["Hombres"]++;
       if (p.sexo_id === "2") carceles.genero["Mujeres"]++;
       if (p.sexo_id === "3") carceles.genero["Transexuales"]++;
-      if (+p.nivel_instruccion_id === 0) carceles.niveldeInstrucción["Sin Datos"]++;
+      if (+p.nivel_instruccion_id === 0) carceles.niveldeInstrucción["Sin datos"]++;
       if (+p.nivel_instruccion_id === 1) carceles.niveldeInstrucción["Ninguno"]++;
       if (+p.nivel_instruccion_id === 2) carceles.niveldeInstrucción["Primario Incompleto"]++;
       if (+p.nivel_instruccion_id === 3) carceles.niveldeInstrucción["Primario Completo"]++;
@@ -653,28 +653,28 @@ function end(d, i, nodes) {
       if (+p.nivel_instruccion_id === 15) carceles.niveldeInstrucción["EGB3 Completo"]++;
       if (+p.nivel_instruccion_id === 16) carceles.niveldeInstrucción["Polimodal Incompleto"]++;
       if (+p.nivel_instruccion_id === 17) carceles.niveldeInstrucción["Polimodal Completo"]++;
-      if (+p.nacionalidad_id === 0) carceles.nacionalidad["Sin Datos"]++;
+      if (+p.nacionalidad_id === 0) carceles.nacionalidad["Sin datos"]++;
       if (+p.nacionalidad_id === 1) {carceles.nacionalidad["Argentinos"]++;}
       else {carceles.nacionalidad["Extranjeros"]++;}
-      if (+p.estado_civil_id === 0) carceles.estadoCivil["Sin Datos"]++;
+      if (+p.estado_civil_id === 0) carceles.estadoCivil["Sin datos"]++;
       if (+p.estado_civil_id === 1) carceles.estadoCivil["Solteros"]++;
       if (+p.estado_civil_id === 2) carceles.estadoCivil["Casados"]++;
       if (+p.estado_civil_id === 3) carceles.estadoCivil["Viudos"]++;
       if (+p.estado_civil_id === 4) carceles.estadoCivil["Separados"]++;
       if (+p.estado_civil_id === 5) carceles.estadoCivil["Separados de hecho"]++;
       if (+p.estado_civil_id === 6) carceles.estadoCivil["Concubinos"]++;
-      if (+p.ultima_situacion_laboral_id === 0) carceles.ultimaSituacionLaboral["Sin Datos"]++;
-      if (+p.ultima_situacion_laboral_id === 1) carceles.ultimaSituacionLaboral["Trabajador Tiempo Completo"]++;
-      if (+p.ultima_situacion_laboral_id === 2) carceles.ultimaSituacionLaboral["Trabajador Tiempo Parcial"]++;
+      if (+p.ultima_situacion_laboral_id === 0) carceles.ultimaSituacionLaboral["Sin datos"]++;
+      if (+p.ultima_situacion_laboral_id === 1) carceles.ultimaSituacionLaboral["Trabajador tiempo Completo"]++;
+      if (+p.ultima_situacion_laboral_id === 2) carceles.ultimaSituacionLaboral["Trabajador tiempo Parcial"]++;
       if (+p.ultima_situacion_laboral_id === 3) carceles.ultimaSituacionLaboral["Desocupado"]++;
-      if (+p.capacitacion_laboral_al_ingresar_id === 0) carceles.capacitacionLaboral["Sin Datos"]++;
-      if (+p.capacitacion_laboral_al_ingresar_id === 1) carceles.capacitacionLaboral["Tiene Algun Oficio"]++;
-      if (+p.capacitacion_laboral_al_ingresar_id === 2) carceles.capacitacionLaboral["Tiene Alguna Profesion"]++;
-      if (+p.capacitacion_laboral_al_ingresar_id === 3) carceles.capacitacionLaboral["No Tiene ni Oficio ni Profesion"]++;
-      if (+p.ultimo_lugar_residencia_id === 0) carceles.ultimoLugarDeResidencia["Sin Datos"]++;
+      if (+p.capacitacion_laboral_al_ingresar_id === 0) carceles.capacitacionLaboral["Sin datos"]++;
+      if (+p.capacitacion_laboral_al_ingresar_id === 1) carceles.capacitacionLaboral["Tiene algún oficio"]++;
+      if (+p.capacitacion_laboral_al_ingresar_id === 2) carceles.capacitacionLaboral["Tiene alguna profesión"]++;
+      if (+p.capacitacion_laboral_al_ingresar_id === 3) carceles.capacitacionLaboral["Ni oficio ni profesión"]++;
+      if (+p.ultimo_lugar_residencia_id === 0) carceles.ultimoLugarDeResidencia["Sin datos"]++;
       if (+p.ultimo_lugar_residencia_id === 1) carceles.ultimoLugarDeResidencia["Rural"]++;
       if (+p.ultimo_lugar_residencia_id === 2) carceles.ultimoLugarDeResidencia["Urbano"]++;
-      if (+p.delito1_id === 0) carceles.delito["Sin Datos"]++;
+      if (+p.delito1_id === 0) carceles.delito["Sin datos"]++;
       if (+p.delito1_id === 1) carceles.delito["Homicidio doloso"]++;
       if (+p.delito1_id === 2) carceles.delito["Homicidio doloso (tent.)"]++;
       if (+p.delito1_id === 3) carceles.delito["Homicidio culposo"]++;
