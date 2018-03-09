@@ -188,7 +188,7 @@ d3.queue()
 
 
     var width = 750,
-      height = 670;
+      height = 700;
 
     var projection = d3.geoTransverseMercator()
                        .center([2.5, -38.5])
