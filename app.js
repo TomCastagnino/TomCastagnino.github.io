@@ -421,7 +421,7 @@ bars
 .attr("transform", "rotate(-90)")
 .attr("width", barWidth)
 .attr("y", (d, i) => (barWidth/2 + 7 + ((barWidth + barPadding) * i)))
-.attr("x", (d) => -(height/2 + yScale(d)) +20)
+.attr("x", (d) => -(height/2 + yScale(d)) +10)
 // .style("text-anchor", "middle")
 .style("font-size", "400")
 .attr("fill", "black");
@@ -512,7 +512,7 @@ console.log(datos);
             .attr("transform", "rotate(-90)")
             .attr("width", barWidth)
             .attr("y", (d, i) => (barWidth/2 + 7 + ((barWidth + barPadding) * (i)) ))
-            .attr("x", (d) => -(height/2 + yScale(d)) +20 )
+            .attr("x", (d) => -(height/2 + yScale(d)) +10 )
             .style("font-size", "400")
             .attr("fill", "black");
 
