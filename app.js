@@ -664,8 +664,8 @@ function end(d, i, nodes) {
       if (+p.estado_civil_id === 5) carceles.estadoCivil["Separados de hecho"]++;
       if (+p.estado_civil_id === 6) carceles.estadoCivil["Concubinos"]++;
       if (+p.ultima_situacion_laboral_id === 0) carceles.ultimaSituacionLaboral["Sin datos"]++;
-      if (+p.ultima_situacion_laboral_id === 1) carceles.ultimaSituacionLaboral["Trabajador tiempo Completo"]++;
-      if (+p.ultima_situacion_laboral_id === 2) carceles.ultimaSituacionLaboral["Trabajador tiempo Parcial"]++;
+      if (+p.ultima_situacion_laboral_id === 1) carceles.ultimaSituacionLaboral["Trabajador tiempo completo"]++;
+      if (+p.ultima_situacion_laboral_id === 2) carceles.ultimaSituacionLaboral["Trabajador tiempo parcial"]++;
       if (+p.ultima_situacion_laboral_id === 3) carceles.ultimaSituacionLaboral["Desocupado"]++;
       if (+p.capacitacion_laboral_al_ingresar_id === 0) carceles.capacitacionLaboral["Sin datos"]++;
       if (+p.capacitacion_laboral_al_ingresar_id === 1) carceles.capacitacionLaboral["Tiene algún oficio"]++;
