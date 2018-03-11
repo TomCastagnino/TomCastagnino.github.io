@@ -573,7 +573,7 @@ function end(d, i, nodes) {
         "Sin datos": 0,
       },
       estadoCivil: {
-        "Sin Datos": 0,
+        "Sin datos": 0,
         "Solteros": 0,
         "Casados": 0,
         "Viudos": 0,
